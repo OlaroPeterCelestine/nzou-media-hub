@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nzou Media Hub - Professional Photography & Media Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f; /* Deep black background */
+        }
+        /* For the outline text effect in the CTA section */
+        .text-outline {
+            -webkit-text-stroke: 2px #9ca3af; /* gray-400 */
+            -webkit-text-fill-color: transparent;
+        }
+        /* Gray gradient for Services section */
+        .services-gradient {
+            background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
+        }
+        /* Clients carousel animation */
+        .clients-carousel {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+        .clients-carousel:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .client-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 p-2 md:p-4">
+        <nav class="container mx-auto max-w-7xl flex justify-between items-center bg-gray-800/80 backdrop-blur-sm p-2 md:p-3 rounded-full">
+            <!-- Logo -->
+            <a href="#" class="flex items-center ml-2 md:ml-4">
+                <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="NZOU Logo" class="h-8 md:h-12 w-auto">
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none mr-2" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links Desktop -->
+            <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+                <a href="#about" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">About</a>
+                <a href="#services" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Service</a>
+                <a href="#portfolio" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Portfolio</a>
+                <a href="#blog" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Blog</a>
+                <a href="#careers" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Careers</a>
+            </div>
+
+            <!-- Contact Button -->
+            <a href="#contact" class="hidden md:block bg-gray-500 text-white font-bold py-2 px-4 lg:px-6 rounded-full hover:bg-gray-600 transition-all mr-2 text-sm lg:text-base">
+                CONTACT
+            </a>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden container mx-auto max-w-7xl bg-gray-800/95 backdrop-blur-sm rounded-2xl mt-2 p-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="text-white hover:text-gray-300 transition-colors py-2">About</a>
+                <a href="#services" class="text-white hover:text-gray-300 transition-colors py-2">Service</a>
+                <a href="#portfolio" class="text-white hover:text-gray-300 transition-colors py-2">Portfolio</a>
+                <a href="#blog" class="text-white hover:text-gray-300 transition-colors py-2">Blog</a>
+                <a href="#careers" class="text-white hover:text-gray-300 transition-colors py-2">Careers</a>
+                <a href="#contact" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-full hover:bg-gray-600 transition-all text-center">
+                    CONTACT
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative flex flex-col items-center justify-center min-h-screen -mt-24">
+            <!-- Background Blurred Image -->
+            <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Blurred background" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 max-w-lg opacity-40 blur-xl">
+
+            <!-- Foreground Images -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <img src="https://images.pexels.com/photos/3771691/pexels-photo-3771691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Photographer by window" class="absolute top-1/4 left-1/4 w-48 h-auto bg-white p-2 rounded-2xl shadow-2xl transform -rotate-12 hidden lg:block">
+                <img src="https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vintage camera" class="absolute bottom-1/4 right-1/4 w-48 h-auto bg-white p-2 rounded-2xl shadow-2xl transform rotate-12 hidden lg:block">
+            </div>
+
+            <!-- Text Content -->
+            <div class="relative text-center z-10 px-4">
+                <h1 class="text-6xl sm:text-7xl md:text-9xl lg:text-[12rem] font-bold text-gray-900 tracking-tighter">Nzou</h1>
+                <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mt-2">Media Hub</h2>
+            </div>
+        </section>
+
+     
+        
+        <!-- About Section -->
+        <section id="about" class="py-12 md:py-20 px-4 bg-gray-900">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">About</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">We are a creative media hub dedicated to delivering exceptional photography and video production services that bring your vision to life.</p>
+            </div>
+            <div class="container mx-auto max-w-6xl mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="relative">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623815/room_impjot.jpg" class="rounded-2xl shadow-2xl w-full h-[300px] md:h-[422px] object-cover" alt="Nzou Media Hub">
+                    <div class="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 bg-gray-500 text-white p-4 md:p-6 rounded-2xl text-center shadow-lg">
+                        <p class="text-3xl md:text-5xl font-bold">25</p>
+                        <p class="text-sm md:text-base">Years of Experience</p>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <h3 class="text-3xl md:text-4xl font-bold">Nzou Media Hub</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-1">Creative <span class="text-gray-400">Excellence</span></h3>
+                    <p class="text-gray-400 mt-6">Nzou Media Hub delivers exceptional photography, videography, and media production services. We specialize in capturing moments, telling stories, and creating content that resonates with your audience.</p>
+                    <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                        <a href="#" class="bg-gray-500 text-white font-bold py-3 px-6 md:px-8 rounded-full hover:bg-gray-600 transition-all flex items-center gap-2 text-sm md:text-base">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="NZOU Logo" class="h-6 w-auto">
+                           REACH OUT
+                        </a>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Need Help?</p>
+                                <p class="font-bold">0762380194</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-12 md:py-20 px-4 services-gradient">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Services</h2>
+            </div>
+            <div class="container mx-auto max-w-6xl mt-8 md:mt-12 p-6 md:p-8 lg:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-8 md:gap-12" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <div class="w-full md:w-1/3">
+                    <p class="text-white/80">At Nzou Media Hub, we understand the power of visual storytelling. Our team specializes in creating stunning visuals that connect with your audience and elevate your brand presence.</p>
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Photo_Stu_mq8tk9.jpg" alt="Photo Studio" class="mt-8 rounded-2xl shadow-xl transform -rotate-6">
+                </div>
+                <div class="w-full md:w-2/3 flex flex-wrap gap-4 justify-center items-center">
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Event Photography</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Commercial</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Travel</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Portrait Photography</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Portfolio</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Fashion Photography</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">Commercial</span>
+                    <span class="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold border border-gray-400">photography</span>
+                </div>
+            </div>
+        </section>
+
+    <!-- Clients Carousel Section -->
+    <section class="py-12 md:py-16 bg-gray-900 overflow-hidden">
+            <div class="container mx-auto max-w-7xl">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-white">Our Clients</h3>
+                <div class="flex overflow-hidden whitespace-nowrap">
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="clients-carousel">
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761550044/SWANGZ-2022-logo-2_autowc.png" alt="SWANGZ Client" class="w-32 h-16 object-contain">
+                        </div>
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1760288825/NRG_LOGO_RED_zifrib.png" alt="NRG Client" class="w-32 h-16 object-contain">
+                        </div>
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png" alt="Client Logo" class="w-32 h-16 object-contain">
+                        </div>
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1754555655/dog_f1ry5v.png" alt="Client Logo" class="w-32 h-16 object-contain">
+                        </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761550044/SWANGZ-2022-logo-2_autowc.png" alt="SWANGZ Client" class="w-32 h-16 object-contain">
+                        </div>
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1760288825/NRG_LOGO_RED_zifrib.png" alt="NRG Client" class="w-32 h-16 object-contain">
+                        </div>
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png" alt="Client Logo" class="w-32 h-16 object-contain">
+                        </div>
+                        <div class="client-logo">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1754555655/dog_f1ry5v.png" alt="Client Logo" class="w-32 h-16 object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-12 md:py-20 px-4">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Portfolio</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Explore our portfolio of work showcasing stunning photography and videography that captures moments and tells compelling stories.</p>
+            </div>
+            <div class="container mx-auto max-w-6xl mt-8 md:mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="sm:col-span-1">
+                        <img class="rounded-2xl w-full h-[250px] object-cover" src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/African_booth_cv2kgc.jpg" alt="African Booth">
+                    </div>
+                    <div class="sm:col-span-1">
+                        <img class="rounded-2xl w-full h-[250px] object-cover" src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Chandelier_jspthw.jpg" alt="Chandelier">
+                    </div>
+                    <div class="sm:col-span-1 md:row-span-2">
+                        <img class="rounded-2xl w-full h-full object-cover" src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Antique_wall_haehlm.jpg" alt="Antique Wall">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <img class="rounded-2xl w-full h-[250px] object-cover" src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Floral_Booth_yn7ikw.jpg" alt="Floral Booth">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="py-16 md:py-24 px-4">
+            <div class="container mx-auto text-center relative flex flex-col items-center justify-center">
+                <div class="absolute w-48 h-48 md:w-64 md:h-64 border-2 border-gray-700 rounded-full"></div>
+                <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Portrait of a woman" class="relative w-24 h-24 md:w-32 md:h-32 object-cover rounded-full z-10 mb-[-3rem] md:mb-[-4rem]">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-gray-300 z-20">Work With Us</h2>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-outline z-0 mt-[-1.5rem] sm:mt-[-2rem] md:mt-[-2rem] lg:mt-[-3rem]">TOGETHER</h2>
+                <a href="#" class="mt-6 md:mt-8 border border-gray-500 text-white font-bold py-3 px-6 md:px-8 rounded-full hover:bg-gray-500 transition-all text-sm md:text-base">Contact Now</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Ready to bring your vision to life? Let's discuss your project and create something amazing together.</p>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="mb-12">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-envelope text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Email</p>
+                            <p class="text-gray-400">info@nzoumedia.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Phone</p>
+                            <p class="text-gray-400">0762380194</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-map-pin text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Location</p>
+                            <p class="text-gray-400">Next to Jikoni Restaurant, Clement Hill Road Former Africell</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="bg-gray-800 p-8 rounded-lg">
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label for="firstName" class="block text-white font-semibold mb-2">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required 
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors"
+                                   placeholder="John">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-white font-semibold mb-2">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required 
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors"
+                                   placeholder="Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors"
+                                   placeholder="john@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="phone" class="block text-white font-semibold mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors"
+                                   placeholder="0762380194">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-white font-semibold mb-2">Service Needed</label>
+                            <select id="service" name="service" required 
+                                    class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors">
+                                <option value="">Select a service</option>
+                                <option value="photography">Photography</option>
+                                <option value="videography">Videography</option>
+                                <option value="branding">Branding</option>
+                                <option value="social-media">Social Media Content</option>
+                                <option value="event-coverage">Event Coverage</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-white font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="3" required 
+                                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors resize-none"
+                                  placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-gray-500 hover:bg-gray-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 md:py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- Logo & Desc -->
+            <div>
+                    <a href="#" class="flex items-center mb-4">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="NZOU Logo" class="h-12 w-auto">
+                </a>
+                    <p class="text-sm">Creating compelling visual stories that drive engagement and inspire action.</p>
+            </div>
+                <!-- Quick Links -->
+            <div>
+                    <h4 class="font-bold text-white text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-white hover:text-gray-300 transition-colors">About</a></li>
+                        <li><a href="#services" class="text-white hover:text-gray-300 transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-white hover:text-gray-300 transition-colors">Portfolio</a></li>
+                        <li><a href="#blog" class="text-white hover:text-gray-300 transition-colors">Blog</a></li>
+                        <li><a href="#careers" class="text-white hover:text-gray-300 transition-colors">Careers</a></li>
+                </ul>
+            </div>
+            <!-- Get in touch -->
+            <div>
+                    <h4 class="font-bold text-white text-lg mb-4">Get in touch</h4>
+                    <a href="mailto:info@nzoumedia.com" class="text-sm hover:text-white transition-colors inline-block mb-4">info@nzoumedia.com</a>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" aria-label="Facebook" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Spotify" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="#" aria-label="Apple" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="SoundCloud" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-soundcloud"></i>
+                        </a>
+                        <a href="#" aria-label="X (Twitter)" class="hover:text-white transition-colors text-2xl">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto max-w-6xl pt-8 border-t border-gray-800 text-center">
+            <p class="text-sm">© 2025 Nzou Media Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/263762380194" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50 group">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+        <div class="absolute right-16 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            Chat with us on WhatsApp
+        </div>
+    </a>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
