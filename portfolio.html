@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Nzou Media Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f; /* Deep black background */
+        }
         .services-gradient {
             background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
         }
@@ -26,55 +33,46 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="text-white overflow-x-hidden">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
-                    <span class="text-xl font-bold text-white">Nzou Media Hub</span>
-                </div>
+    <header class="sticky top-0 z-50 p-2 md:p-4">
+        <nav class="container mx-auto max-w-7xl flex justify-between items-center bg-gray-800/80 backdrop-blur-sm p-2 md:p-3 rounded-full">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center ml-2 md:ml-4">
+                <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="NZOU Logo" class="h-8 md:h-12 w-auto">
+            </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
-                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
-                    <a href="portfolio.html" class="text-gray-400 hover:text-gray-300 transition-colors">Portfolio</a>
-                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
-                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
-                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
-                </nav>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none mr-2" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
 
-                <!-- CTA Button -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2">
-                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
-                        <span>REACH OUT</span>
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-white">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+            <!-- Navigation Links Desktop -->
+            <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+                <a href="services.html" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Services</a>
+                <a href="portfolio.html" class="text-gray-400 hover:text-gray-300 transition-colors text-sm lg:text-base">Portfolio</a>
+                <a href="blog.html" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Blog</a>
+                <a href="careers.html" class="text-white hover:text-gray-300 transition-colors text-sm lg:text-base">Careers</a>
             </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <nav class="flex flex-col space-y-4">
-                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
-                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
-                    <a href="portfolio.html" class="text-gray-400 hover:text-gray-300 transition-colors">Portfolio</a>
-                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
-                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
-                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
-                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2 w-fit">
-                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
-                        <span>REACH OUT</span>
-                    </a>
-                </nav>
+            <!-- Contact Button -->
+            <a href="contact.html" class="hidden md:block bg-gray-500 text-white font-bold py-2 px-4 lg:px-6 rounded-full hover:bg-gray-600 transition-all mr-2 text-sm lg:text-base">
+                CONTACT
+            </a>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden container mx-auto max-w-7xl bg-gray-800/95 backdrop-blur-sm rounded-2xl mt-2 p-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="services.html" class="text-white hover:text-gray-300 transition-colors py-2">Services</a>
+                <a href="portfolio.html" class="text-gray-400 hover:text-gray-300 transition-colors py-2">Portfolio</a>
+                <a href="blog.html" class="text-white hover:text-gray-300 transition-colors py-2">Blog</a>
+                <a href="careers.html" class="text-white hover:text-gray-300 transition-colors py-2">Careers</a>
+                <a href="contact.html" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-full hover:bg-gray-600 transition-all text-center">
+                    CONTACT
+                </a>
             </div>
         </div>
     </header>
