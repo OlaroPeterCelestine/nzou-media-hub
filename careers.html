@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Nzou Media Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-gradient {
+            background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
+        }
+        .clients-carousel {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .job-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                    <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-white hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-gray-400 hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-white hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-gray-400 hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2 w-fit">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Join</span> <span class="text-white">Our Team</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Be part of a creative team that's passionate about storytelling and pushing the boundaries of media production. Discover exciting career opportunities at Nzou Media Hub.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Why Work With Us?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-600 p-3 rounded-lg">
+                                <i class="fas fa-lightbulb text-xl text-gray-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Creative Freedom</h3>
+                                <p class="text-gray-300">We encourage innovation and creative expression, giving you the space to explore new ideas and techniques.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-600 p-3 rounded-lg">
+                                <i class="fas fa-users text-xl text-gray-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Collaborative Environment</h3>
+                                <p class="text-gray-300">Work alongside talented professionals in a supportive, collaborative atmosphere where everyone's input is valued.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-600 p-3 rounded-lg">
+                                <i class="fas fa-chart-line text-xl text-gray-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Growth Opportunities</h3>
+                                <p class="text-gray-300">Continuous learning and professional development opportunities to advance your career in the media industry.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-600 p-3 rounded-lg">
+                                <i class="fas fa-tools text-xl text-gray-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">State-of-the-Art Equipment</h3>
+                                <p class="text-gray-300">Access to the latest technology and equipment to bring your creative visions to life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623815/room_impjot.jpg" alt="Our Team" class="w-full h-[300px] md:h-[422px] object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Culture -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Our Culture</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    At Nzou Media Hub, we believe that great work comes from great people working in an environment that fosters creativity, collaboration, and growth.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-700 p-8 rounded-lg">
+                        <i class="fas fa-heart text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4 text-white">Passion-Driven</h3>
+                        <p class="text-gray-300">
+                            We're passionate about what we do and believe in the power of storytelling to create meaningful connections.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-700 p-8 rounded-lg">
+                        <i class="fas fa-balance-scale text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4 text-white">Work-Life Balance</h3>
+                        <p class="text-gray-300">
+                            We understand the importance of maintaining a healthy balance between work and personal life.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-700 p-8 rounded-lg">
+                        <i class="fas fa-globe text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4 text-white">Diverse & Inclusive</h3>
+                        <p class="text-gray-300">
+                            We celebrate diversity and create an inclusive environment where everyone feels valued and respected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Open Positions</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Join our growing team and help us create exceptional media content. Check out our current openings below.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Job 1 -->
+                <div class="job-card bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">Full-time</span>
+                        <span class="text-gray-400 text-sm">Harare, Zimbabwe</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Senior Photographer</h3>
+                    <p class="text-gray-300 mb-4">
+                        We're looking for an experienced photographer to lead our photography team and work on high-profile projects.
+                    </p>
+                    <div class="mb-4">
+                        <h4 class="text-white font-semibold mb-2">Requirements:</h4>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            <li>• 5+ years of professional photography experience</li>
+                            <li>• Proficiency in Adobe Creative Suite</li>
+                            <li>• Strong portfolio demonstrating various photography styles</li>
+                            <li>• Excellent communication and leadership skills</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors inline-block">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="job-card bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">Full-time</span>
+                        <span class="text-gray-400 text-sm">Harare, Zimbabwe</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Video Editor</h3>
+                    <p class="text-gray-300 mb-4">
+                        Join our post-production team as a video editor to create compelling visual stories for our diverse client base.
+                    </p>
+                    <div class="mb-4">
+                        <h4 class="text-white font-semibold mb-2">Requirements:</h4>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            <li>• 3+ years of video editing experience</li>
+                            <li>• Expertise in Premiere Pro, After Effects, and DaVinci Resolve</li>
+                            <li>• Understanding of color grading and motion graphics</li>
+                            <li>• Creative storytelling abilities</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors inline-block">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="job-card bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">Part-time</span>
+                        <span class="text-gray-400 text-sm">Remote</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Social Media Content Creator</h3>
+                    <p class="text-gray-300 mb-4">
+                        Help us create engaging social media content and manage our online presence across various platforms.
+                    </p>
+                    <div class="mb-4">
+                        <h4 class="text-white font-semibold mb-2">Requirements:</h4>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            <li>• 2+ years of social media management experience</li>
+                            <li>• Strong writing and visual design skills</li>
+                            <li>• Knowledge of social media analytics</li>
+                            <li>• Creative thinking and trend awareness</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors inline-block">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="job-card bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">Full-time</span>
+                        <span class="text-gray-400 text-sm">Harare, Zimbabwe</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Audio Engineer</h3>
+                    <p class="text-gray-300 mb-4">
+                        Join our audio production team to create high-quality sound content for various projects and clients.
+                    </p>
+                    <div class="mb-4">
+                        <h4 class="text-white font-semibold mb-2">Requirements:</h4>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            <li>• 3+ years of audio engineering experience</li>
+                            <li>• Proficiency in Pro Tools, Logic Pro, and Ableton Live</li>
+                            <li>• Understanding of recording techniques and equipment</li>
+                            <li>• Attention to detail and quality standards</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors inline-block">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Employee Benefits</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We offer comprehensive benefits to ensure our team members are well taken care of and can focus on doing their best work.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <i class="fas fa-medal text-3xl text-gray-400 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2 text-white">Competitive Salary</h3>
+                        <p class="text-gray-300 text-sm">Attractive compensation packages based on experience and skills.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <i class="fas fa-graduation-cap text-3xl text-gray-400 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2 text-white">Learning & Development</h3>
+                        <p class="text-gray-300 text-sm">Continuous learning opportunities and professional development support.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <i class="fas fa-clock text-3xl text-gray-400 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2 text-white">Flexible Hours</h3>
+                        <p class="text-gray-300 text-sm">Flexible working hours to accommodate personal commitments.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <i class="fas fa-users text-3xl text-gray-400 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2 text-white">Team Events</h3>
+                        <p class="text-gray-300 text-sm">Regular team building activities and company events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">How to Apply</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ready to join our team? Follow these simple steps to submit your application.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Prepare Your Application</h3>
+                    <p class="text-gray-300 text-sm">
+                        Update your resume and prepare a portfolio showcasing your best work.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Submit Application</h3>
+                    <p class="text-gray-300 text-sm">
+                        Send your application through our contact form or email us directly.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Initial Review</h3>
+                    <p class="text-gray-300 text-sm">
+                        We'll review your application and contact you within 5 business days.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Interview Process</h3>
+                    <p class="text-gray-300 text-sm">
+                        Participate in interviews and showcase your skills and passion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Join Our Team?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Don't see a position that matches your skills? We're always looking for talented individuals. Send us your application and let's discuss opportunities.
+                </p>
+                <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-8 py-3 rounded-lg transition-colors inline-flex items-center space-x-2">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-6 w-6 rounded object-cover">
+                    <span>Apply Now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                        <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Your trusted partner for exceptional media production services. We create compelling visual stories that engage, inspire, and drive results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Spotify">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Apple Music">
+                            <i class="fab fa-apple text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="SoundCloud">
+                            <i class="fab fa-soundcloud text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Home</a>
+                            <a href="about.html" class="text-gray-400 hover:text-white transition-colors block mb-2">About</a>
+                            <a href="services.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Services</a>
+                            <a href="portfolio.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Portfolio</a>
+                        </div>
+                        <div>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Blog</a>
+                            <a href="careers.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Careers</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Nzou Media Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/263762380194" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors z-50" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

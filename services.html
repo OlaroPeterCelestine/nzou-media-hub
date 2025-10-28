@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Nzou Media Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-gradient {
+            background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
+        }
+        .clients-carousel {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                    <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-white hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-white hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2 w-fit">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Our</span> <span class="text-white">Services</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Comprehensive media production services tailored to bring your vision to life. From concept to completion, we deliver exceptional results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Complete Media Solutions</h2>
+                    <div class="space-y-4 text-gray-300">
+                        <p>
+                            At Nzou Media Hub, we offer a full spectrum of media production services designed to meet the diverse needs of our clients. Our expertise spans photography, videography, audio production, and digital content creation.
+                        </p>
+                        <p>
+                            Whether you're launching a new product, hosting an event, or building your brand presence, our team of skilled professionals is equipped with state-of-the-art equipment and creative vision to deliver outstanding results.
+                        </p>
+                        <p>
+                            We pride ourselves on understanding your unique requirements and crafting customized solutions that exceed expectations while staying within budget and timeline constraints.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Photo_Stu_mq8tk9.jpg" alt="Our Studio" class="w-full h-[300px] md:h-[422px] object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">What We Offer</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Our comprehensive service portfolio covers every aspect of modern media production.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Photography -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-camera text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white">Photography</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Portrait & Headshot Photography</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Event Photography</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Product Photography</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Commercial Photography</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Wedding Photography</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Videography -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-video text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white">Videography</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Corporate Videos</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Event Documentation</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Music Videos</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Documentary Production</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Live Streaming</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Audio Production -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-microphone text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white">Audio Production</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Music Recording</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Podcast Production</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Voice Over Recording</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Audio Post-Production</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Sound Design</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Digital Content -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-palette text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white">Digital Content</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Social Media Content</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Graphic Design</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Brand Identity</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Web Content Creation</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Marketing Materials</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Event Coverage -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-calendar-alt text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white">Event Coverage</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Corporate Events</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Conferences & Seminars</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Weddings & Celebrations</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Product Launches</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Live Performances</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Post-Production -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cut text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white">Post-Production</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Video Editing</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Color Grading</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Motion Graphics</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Photo Retouching</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-gray-400"></i>
+                            <span>Final Delivery</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Our Process</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We follow a structured approach to ensure every project is delivered on time and exceeds expectations.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Consultation</h3>
+                    <p class="text-gray-300 text-sm">
+                        We start with understanding your vision, requirements, and goals for the project.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Planning</h3>
+                    <p class="text-gray-300 text-sm">
+                        We create a detailed project plan, timeline, and budget that aligns with your needs.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Production</h3>
+                    <p class="text-gray-300 text-sm">
+                        Our team executes the project with precision, creativity, and attention to detail.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-gray-400">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-white">Delivery</h3>
+                    <p class="text-gray-300 text-sm">
+                        We deliver the final product in your preferred format and provide ongoing support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Flexible Pricing</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We offer competitive pricing packages tailored to different project sizes and budgets.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-8 rounded-lg text-center">
+                    <h3 class="text-xl font-bold mb-4 text-white">Basic Package</h3>
+                    <div class="text-3xl font-bold mb-6 text-gray-400">From $200</div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li>2-hour photo session</li>
+                        <li>20 edited photos</li>
+                        <li>Basic retouching</li>
+                        <li>Digital delivery</li>
+                    </ul>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors">
+                        Get Quote
+                    </a>
+                </div>
+                <div class="bg-gray-600 p-8 rounded-lg text-center border-2 border-gray-500">
+                    <h3 class="text-xl font-bold mb-4 text-white">Professional Package</h3>
+                    <div class="text-3xl font-bold mb-6 text-gray-400">From $500</div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li>4-hour session</li>
+                        <li>50 edited photos</li>
+                        <li>Professional retouching</li>
+                        <li>Multiple formats</li>
+                        <li>Rush delivery option</li>
+                    </ul>
+                    <a href="contact.html" class="bg-gray-500 hover:bg-gray-400 text-white px-6 py-2 rounded-lg transition-colors">
+                        Get Quote
+                    </a>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-lg text-center">
+                    <h3 class="text-xl font-bold mb-4 text-white">Premium Package</h3>
+                    <div class="text-3xl font-bold mb-6 text-gray-400">From $1000</div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li>Full day coverage</li>
+                        <li>100+ edited photos</li>
+                        <li>Premium retouching</li>
+                        <li>Video highlights</li>
+                        <li>Print-ready files</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Get Started?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Let's discuss your project requirements and create something amazing together. Contact us today for a free consultation.
+                </p>
+                <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-8 py-3 rounded-lg transition-colors inline-flex items-center space-x-2">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-6 w-6 rounded object-cover">
+                    <span>Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                        <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Your trusted partner for exceptional media production services. We create compelling visual stories that engage, inspire, and drive results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Spotify">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Apple Music">
+                            <i class="fab fa-apple text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="SoundCloud">
+                            <i class="fab fa-soundcloud text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Home</a>
+                            <a href="about.html" class="text-gray-400 hover:text-white transition-colors block mb-2">About</a>
+                            <a href="services.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Services</a>
+                            <a href="portfolio.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Portfolio</a>
+                        </div>
+                        <div>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Blog</a>
+                            <a href="careers.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Careers</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Nzou Media Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/263762380194" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors z-50" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nzou Media Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-gradient {
+            background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
+        }
+        .clients-carousel {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .portfolio-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                    <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-gray-400 hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-gray-400 hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2 w-fit">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Our</span> <span class="text-white">Portfolio</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Explore our collection of creative work and see how we've helped brands tell their stories through exceptional media production.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white px-6 py-2 rounded-lg transition-colors" data-filter="photography">
+                    Photography
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white px-6 py-2 rounded-lg transition-colors" data-filter="videography">
+                    Videography
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white px-6 py-2 rounded-lg transition-colors" data-filter="events">
+                    Events
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white px-6 py-2 rounded-lg transition-colors" data-filter="commercial">
+                    Commercial
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Photography Projects -->
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="photography">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/African_booth_cv2kgc.jpg" alt="African Cultural Photography" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">African Cultural Photography</h3>
+                        <p class="text-gray-300 mb-4">Capturing the rich heritage and traditions of African culture through stunning visual storytelling.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Photography</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="photography">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Chandelier_jspthw.jpg" alt="Elegant Event Photography" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Elegant Event Photography</h3>
+                        <p class="text-gray-300 mb-4">Sophisticated event coverage capturing the essence of luxury and celebration.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Photography</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Videography Projects -->
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="videography">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Antique_wall_haehlm.jpg" alt="Corporate Video Production" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Corporate Video Production</h3>
+                        <p class="text-gray-300 mb-4">Professional corporate videos that communicate brand messages effectively.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Videography</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Projects -->
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="events">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Floral_Booth_yn7ikw.jpg" alt="Wedding Event Coverage" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Wedding Event Coverage</h3>
+                        <p class="text-gray-300 mb-4">Complete wedding documentation capturing every precious moment and detail.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Events</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Projects -->
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="commercial">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623815/room_impjot.jpg" alt="Commercial Photography" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Commercial Photography</h3>
+                        <p class="text-gray-300 mb-4">High-quality commercial imagery that drives sales and brand recognition.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Commercial</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="photography">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Photo_Stu_mq8tk9.jpg" alt="Studio Photography" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Studio Photography</h3>
+                        <p class="text-gray-300 mb-4">Professional studio sessions with controlled lighting and perfect composition.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Photography</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Projects -->
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="events">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/African_booth_cv2kgc.jpg" alt="Cultural Event Coverage" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Cultural Event Coverage</h3>
+                        <p class="text-gray-300 mb-4">Documenting cultural celebrations and traditional ceremonies with respect and artistry.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Events</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="videography">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Chandelier_jspthw.jpg" alt="Music Video Production" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Music Video Production</h3>
+                        <p class="text-gray-300 mb-4">Creative music videos that bring songs to life with visual storytelling.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Videography</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden" data-category="commercial">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761623814/Antique_wall_haehlm.jpg" alt="Product Photography" class="w-full h-[250px] object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Product Photography</h3>
+                        <p class="text-gray-300 mb-4">Stunning product imagery that showcases features and drives conversions.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-400">Commercial</span>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">What Our Clients Say</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Nzou Media Hub exceeded our expectations. Their attention to detail and creative vision brought our brand story to life in ways we never imagined."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Sarah M.</h4>
+                            <p class="text-gray-400 text-sm">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Professional, creative, and reliable. They delivered our wedding photos ahead of schedule, and the quality was absolutely stunning."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">John & Mary</h4>
+                            <p class="text-gray-400 text-sm">Wedding Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "The team's expertise in both photography and videography is unmatched. They captured our corporate event perfectly and delivered exceptional results."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">David K.</h4>
+                            <p class="text-gray-400 text-sm">CEO, Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Create Something Amazing?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Let's work together to bring your vision to life. Contact us today to discuss your next project.
+                </p>
+                <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-8 py-3 rounded-lg transition-colors inline-flex items-center space-x-2">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-6 w-6 rounded object-cover">
+                    <span>Start Your Project</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                        <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Your trusted partner for exceptional media production services. We create compelling visual stories that engage, inspire, and drive results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Spotify">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Apple Music">
+                            <i class="fab fa-apple text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="SoundCloud">
+                            <i class="fab fa-soundcloud text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Home</a>
+                            <a href="about.html" class="text-gray-400 hover:text-white transition-colors block mb-2">About</a>
+                            <a href="services.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Services</a>
+                            <a href="portfolio.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Portfolio</a>
+                        </div>
+                        <div>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Blog</a>
+                            <a href="careers.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Careers</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Nzou Media Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/263762380194" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors z-50" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-gray-600', 'text-white');
+                    btn.classList.add('bg-gray-700', 'text-gray-300');
+                });
+
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-gray-600', 'text-white');
+                button.classList.remove('bg-gray-700', 'text-gray-300');
+
+                const filter = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

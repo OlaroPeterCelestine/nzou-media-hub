@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nzou Media Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-gradient {
+            background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
+        }
+        .clients-carousel {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                    <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-white hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-gray-300 transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+                    <a href="services.html" class="text-white hover:text-gray-300 transition-colors">Services</a>
+                    <a href="portfolio.html" class="text-white hover:text-gray-300 transition-colors">Portfolio</a>
+                    <a href="blog.html" class="text-white hover:text-gray-300 transition-colors">Blog</a>
+                    <a href="careers.html" class="text-white hover:text-gray-300 transition-colors">Careers</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-gray-300 transition-colors">Contact</a>
+                    <a href="contact.html" class="bg-gray-600 hover:bg-gray-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center space-x-2 w-fit">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-5 w-5 rounded object-cover">
+                        <span>REACH OUT</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-gray-900">Get In</span> <span class="text-white">Touch</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ready to bring your vision to life? We'd love to hear from you. Get in touch with our team to discuss your project and discover how we can help.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Email -->
+                <div class="text-center">
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <i class="fas fa-envelope text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-white">Email Us</h3>
+                        <p class="text-gray-300 mb-4">Send us an email anytime</p>
+                        <a href="mailto:info@nzoumediahub.com" class="text-gray-400 hover:text-white transition-colors">
+                            info@nzoumediahub.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="text-center">
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <i class="fas fa-phone text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-white">Call Us</h3>
+                        <p class="text-gray-300 mb-4">Mon-Fri 9AM-6PM</p>
+                        <a href="tel:0762380194" class="text-gray-400 hover:text-white transition-colors">
+                            0762380194
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="text-center">
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <i class="fas fa-map-pin text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-white">Visit Us</h3>
+                        <p class="text-gray-300 mb-4">Come see our studio</p>
+                        <p class="text-gray-400 text-sm">
+                            Next to Jikoni Restaurant<br>
+                            Clement Hill Road<br>
+                            Former Africell
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Send Us a Message</h2>
+                    <p class="text-xl text-gray-300">
+                        Fill out the form below and we'll get back to you within 24 hours.
+                    </p>
+                </div>
+
+                <form class="bg-gray-700 p-8 rounded-lg">
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-white font-semibold mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-white font-semibold mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone" class="block text-white font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <!-- Service -->
+                        <div>
+                            <label for="service" class="block text-white font-semibold mb-2">Service Interested In</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 bg-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                                <option value="">Select a service</option>
+                                <option value="photography">Photography</option>
+                                <option value="videography">Videography</option>
+                                <option value="audio-production">Audio Production</option>
+                                <option value="digital-content">Digital Content</option>
+                                <option value="event-coverage">Event Coverage</option>
+                                <option value="post-production">Post-Production</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                        </div>
+
+                        <!-- Budget -->
+                        <div>
+                            <label for="budget" class="block text-white font-semibold mb-2">Project Budget</label>
+                            <select id="budget" name="budget" class="w-full px-4 py-3 bg-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                                <option value="">Select budget range</option>
+                                <option value="under-500">Under $500</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000-2500">$1,000 - $2,500</option>
+                                <option value="2500-5000">$2,500 - $5,000</option>
+                                <option value="over-5000">Over $5,000</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-6">
+                        <label for="message" class="block text-white font-semibold mb-2">Project Details *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project, timeline, and any specific requirements..." class="w-full px-4 py-3 bg-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="bg-gray-600 hover:bg-gray-500 text-white px-8 py-3 rounded-lg transition-colors inline-flex items-center space-x-2">
+                            <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou" class="h-6 w-6 rounded object-cover">
+                            <span>Send Message</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Follow Us</h2>
+                <p class="text-xl text-gray-300">
+                    Stay connected with us on social media for the latest updates, behind-the-scenes content, and creative inspiration.
+                </p>
+            </div>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-4xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <i class="fab fa-instagram text-4xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Spotify">
+                    <i class="fab fa-spotify text-4xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Apple Music">
+                    <i class="fab fa-apple text-4xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                    <i class="fab fa-youtube text-4xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="SoundCloud">
+                    <i class="fab fa-soundcloud text-4xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="X (Twitter)">
+                    <i class="fab fa-x-twitter text-4xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Find Us</h2>
+                <p class="text-xl text-gray-300">
+                    Visit our studio located in the heart of Harare. We're easily accessible and always happy to welcome visitors.
+                </p>
+            </div>
+            <div class="bg-gray-700 p-8 rounded-lg text-center">
+                <div class="mb-6">
+                    <i class="fas fa-map-pin text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Nzou Media Hub Studio</h3>
+                    <p class="text-gray-300">
+                        Next to Jikoni Restaurant<br>
+                        Clement Hill Road<br>
+                        Former Africell<br>
+                        Harare, Zimbabwe
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-white">Studio Hours</h4>
+                        <div class="text-gray-300 space-y-1">
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: By Appointment</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-white">Contact Information</h4>
+                        <div class="text-gray-300 space-y-1">
+                            <p>Phone: 0762380194</p>
+                            <p>Email: info@nzoumediahub.com</p>
+                            <p>WhatsApp: 0762380194</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Here are some common questions we receive. If you don't find what you're looking for, feel free to contact us directly.
+                </p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-white">How far in advance should I book?</h3>
+                    <p class="text-gray-300">We recommend booking at least 2-4 weeks in advance for most projects. For larger events or complex productions, we suggest 6-8 weeks notice to ensure availability and proper planning.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-white">Do you provide equipment?</h3>
+                    <p class="text-gray-300">Yes, we provide all necessary professional equipment including cameras, lighting, audio gear, and post-production tools. Our equipment is regularly maintained and updated to ensure the highest quality results.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-white">What's included in your packages?</h3>
+                    <p class="text-gray-300">Our packages include shooting time, basic editing, high-resolution digital files, and a consultation. Additional services like advanced editing, prints, or rush delivery can be added for an extra fee.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-white">Do you travel for projects?</h3>
+                    <p class="text-gray-300">Yes, we travel throughout Zimbabwe and can accommodate international projects. Travel costs are calculated based on distance and project requirements.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3 text-white">How long does post-production take?</h3>
+                    <p class="text-gray-300">Post-production timelines vary by project complexity. Simple photo editing typically takes 3-5 business days, while video projects may take 1-3 weeks depending on the scope and requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://res.cloudinary.com/dodl9nols/image/upload/v1761620052/NZOU_jmhmip.jpg" alt="Nzou Media Hub" class="h-10 w-10 rounded-lg object-cover">
+                        <span class="text-xl font-bold text-white">Nzou Media Hub</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Your trusted partner for exceptional media production services. We create compelling visual stories that engage, inspire, and drive results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Spotify">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Apple Music">
+                            <i class="fab fa-apple text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="SoundCloud">
+                            <i class="fab fa-soundcloud text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Home</a>
+                            <a href="about.html" class="text-gray-400 hover:text-white transition-colors block mb-2">About</a>
+                            <a href="services.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Services</a>
+                            <a href="portfolio.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Portfolio</a>
+                        </div>
+                        <div>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Blog</a>
+                            <a href="careers.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Careers</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors block mb-2">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Nzou Media Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/263762380194" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors z-50" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission handling
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
